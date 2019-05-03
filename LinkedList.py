@@ -40,6 +40,7 @@ class LinkedList():
         """
         If the list is not empty, returns the element stored at the beginning of the list
         exception is raised otherwise
+        Runtime: O(1)
         """
         if self.isEmpty():
             raise Error("Empty Linked List")
@@ -50,6 +51,7 @@ class LinkedList():
         """
         If the list is not empty, returns the element stored at the end of the list
         exception is raised otherwise
+        Runtime: O(1)
         """
         if self.isEmpty():
             raise Error("Empty Linked List")
@@ -60,6 +62,7 @@ class LinkedList():
         """
         If the list is not empty, returns the element stored at the specified INDEX
         exception is raised if the list is empty, or INDEX is not between 1 and list SIZE 
+        Runtime: O(N)
         """
         if self.isEmpty():
             raise Error("Empty Linked List")
@@ -76,6 +79,7 @@ class LinkedList():
     def addFirst(self, data):
         """
         New element DATA is added to the front of the list, SIZE of list increases
+        Runtime: O(1)
         """
         newNode = Node(data, self.__head)
         
@@ -89,6 +93,7 @@ class LinkedList():
     def addLast(self, data):
         """
         New element DATA is added to the back of the list, SIZE of list increases
+        Runtime: O(1)
         """
         newNode = Node(data)
 
@@ -105,6 +110,7 @@ class LinkedList():
         """
         Adds a new specified DATA element to the list at the specified INDEX location, every element 
         after it is moved over one posicion. Specified INDEX must be between 0 and the current size of the list
+        Runtime: O(N)
         """
         if (index < 0 or index > self.size):
             raise IndexError("Invalid index.")
@@ -131,6 +137,7 @@ class LinkedList():
         """
         If the list is not empty, sets the element at the specified INDEX equal to DATA
         exception is raised if the list is empty, or INDEX is not between 1 and list SIZE 
+        Runtime: O(N)
         """
         if self.isEmpty():
             raise Error("Empty Linked List")
@@ -148,6 +155,7 @@ class LinkedList():
         """
         If the list is not empty, removes and returns the first element in the list. 
         Exception is raised otherwise
+        Runtime: O(1)
         """
         if self.isEmpty():
             raise Error("Cannot remove out an element from an empty Linked List")
@@ -169,6 +177,7 @@ class LinkedList():
         """
         If the list is not empty, removes and returns the last element in the list. 
         Exception is raised otherwise
+        Runtime: O(N)
         """ 
         if self.isEmpty():
             raise Error("Cannot remove out an element from an empty Linked List")
@@ -195,6 +204,7 @@ class LinkedList():
         """
         Removes and returns the element at the specified INDEX location.
         Exception is raised for INDEX out of bounds
+        Runtime: O(N)
         """
         if (index < 0 or index >= self.size):
             raise IndexError("Invalid index.")
