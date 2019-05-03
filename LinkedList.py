@@ -43,7 +43,7 @@ class LinkedList():
         Runtime: O(1)
         """
         if self.isEmpty():
-            raise Error("Empty Linked List")
+            raise IndexError("Empty Linked List")
 
         return self.__head.data
 
@@ -54,7 +54,7 @@ class LinkedList():
         Runtime: O(1)
         """
         if self.isEmpty():
-            raise Error("Empty Linked List")
+            raise IndexError("Empty Linked List")
 
         return self.__tail.data
 
@@ -140,7 +140,7 @@ class LinkedList():
         Runtime: O(N)
         """
         if self.isEmpty():
-            raise Error("Empty Linked List")
+            raise IndexError("Empty Linked List")
 
         if (index < 0 or index >= self.size):
             raise IndexError("Invalid index.")
@@ -158,7 +158,7 @@ class LinkedList():
         Runtime: O(1)
         """
         if self.isEmpty():
-            raise Error("Cannot remove out an element from an empty Linked List")
+            raise IndexError("Cannot remove out an element from an empty Linked List")
 
         else:
 
@@ -180,7 +180,7 @@ class LinkedList():
         Runtime: O(N)
         """ 
         if self.isEmpty():
-            raise Error("Cannot remove out an element from an empty Linked List")
+            raise IndexError("Cannot remove out an element from an empty Linked List")
 
         last = self.__tail.data
 
